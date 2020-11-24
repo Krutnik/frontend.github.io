@@ -11,10 +11,31 @@
 
     <h1>Знакомство с методами DOM</h1>
 
-    <button class="btn btn_create">Создать элементы</button>
-    <input class="number_elements" type="number" min="0" max="10" value="3">
+    <form action="" class="form">
+        <fieldset class="group_form group_form__create">
+            <legend class="group_title">Создание элементов</legend>
 
-    <button class="btn btn_remove">Удалить элементы</button>
+            <div class="row_form">
+                <label for="number_elements">кол-во элементов: </label>
+                <input class="number_elements" id="number_elements" type="number" min="0" max="10" value="3">
+            </div> 
+            <div class="row_form">
+                <label for="text">Текст элемента </label>
+                <textarea class="text_container" id="text"></textarea>
+            </div> 
+            <div class="row_form">
+                <label for="chk_img">С картинкой</label>
+                <input class="chk_img" id="chk_img" type="checkbox">
+            </div> 
+
+            <button class="btn btn_create">Создать элементы</button>
+        </fieldset>
+
+        <fieldset class="group_form group_form__remove">
+            <legend class="group_title">Удаление элементов</legend>
+            <button class="btn btn_remove">Удалить элементы</button>
+        </fieldset>
+    </form>
 
     <div class="new_element"></div>
 

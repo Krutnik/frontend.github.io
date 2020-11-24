@@ -10,15 +10,6 @@
     
     transition: all 0.25s;
 }
-.btn_create {
-    background-color: rgb(61, 125, 199);
-}
-
-.btn_remove{
-    margin-left: 25px;
-
-    background-color: rgb(201, 90, 46);
-}
 
 .btn:hover {
     cursor: pointer;
@@ -42,7 +33,65 @@
 
 .elem {
     padding: 10px;
+    
     font-size: 20px;
     border: 1px dashed gold;
 }
+
+.form {
+    padding: 15px;
+    min-width: 400px;
+    max-width: 600px;
+}
+
+.row_form {
+    line-height: 150%;
+}
+
+.group_form {
+    border: 2px solid rgb(245, 72, 42);
+    background-color: rgb(190, 241, 47);
+}
+
+.group_form__create {
+    margin-bottom: 15px;
+}
+
+.group_title {
+    padding: 0 10px;
+
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+
+    color: rgb(65, 112, 240)
+}
+
+.form label {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    color: rgb(48, 19, 153);
+}
+
+.form .text_container {
+    display: block;
+    width: 75%;
+    min-height: 150px;
+    border: 1px solid gold;
+}
    
+.form .btn_create {
+    margin: 10px 0;
+
+    background-color: rgb(61, 125, 199);
+}
+
+.form .btn_remove{
+    margin: 10px 0;
+
+    background-color: rgb(201, 90, 46);
+}
