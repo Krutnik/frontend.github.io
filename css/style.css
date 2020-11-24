@@ -1,0 +1,48 @@
+.btn {
+    padding: 10px 15px;
+
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 1px 3px rgb(70, 147, 248);
+
+    color: #fff;
+    text-transform: uppercase;
+    
+    transition: all 0.25s;
+}
+.btn_create {
+    background-color: rgb(61, 125, 199);
+}
+
+.btn_remove{
+    margin-left: 25px;
+
+    background-color: rgb(201, 90, 46);
+}
+
+.btn:hover {
+    cursor: pointer;
+    filter: saturate(170%);
+}
+
+.number_elements {
+    margin-left: 10px;
+    border: 1px solid gold;
+    border-radius: 5px;
+
+    text-align: center;
+}
+
+.new_element {
+    margin-top: 25px;
+    min-height: 25vh;
+
+    background-color: lightgreen;
+}
+
+.elem {
+    padding: 10px;
+    font-size: 20px;
+    border: 1px dashed gold;
+}
+   
