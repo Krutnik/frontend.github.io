@@ -1,108 +1,140 @@
-let tableName = document.getElementById('tableName').value;
-let numberRows = document.getElementById('numberRows').value;
-let numberColumns = document.getElementById('numberColumns').value;
+let tableName = document.getElementById('tableName');
+let numberRows = document.getElementById('numberRows');
+let numberColumns = document.getElementById('numberColumns');
+let moreSetting = document.getElementById('moreSetting');
+let moreSettingHidden = document.querySelectorAll('.more-setting-hidden');
 
-let tableBorderWidth = document.getElementById('tableBorderWidth').value + 'px';
-let tableBorderType = document.querySelector('.table-border-type').value;
-let tableBorderColor = document.getElementById('tableBorderColor').value;
+let tableBorderWidth = document.getElementById('tableBorderWidth');
+let tableBorderType = document.querySelector('.table-border-type');
+let tableBorderColor = document.getElementById('tableBorderColor');
 
-let tabledataPadding = document.getElementById('tableDataPadding').value;
+let tableDataPadding = document.getElementById('tableDataPadding');
 
-let tableDataColor = document.getElementById('tableDataColor').value;
-let tableFontSize = document.querySelector('.table-font-size').value;
-let tableFontColor = document.getElementById('tableDataFontColor').value;
+let tableDataColor = document.getElementById('tableDataColor');
+let tableFontSize = document.querySelector('.table-font-size');
+let tableFontColor = document.getElementById('tableFontColor');
 
-let tableDataWidth = document.getElementById('tableDataWidth').value;
-let dataBorderType = document.querySelector('.data-border-type').value;
-let dataBorderColor = document.getElementById('dataBorderColor').value;
+let tableDataWidth = document.getElementById('tableDataWidth');
+let dataBorderType = document.querySelector('.data-border-type');
+let dataBorderColor = document.getElementById('dataBorderColor');
 
 let btnCreate = document.querySelector('.btn-create');
 let btnRemove = document.querySelector('.btn-remove');
 
+let table;
+let row, data;
+
 function createTable() {
-    let table = document.createElement('table');
-    table.classList.add('table');
+    table = createElem('table', 'table');
     document.body.appendChild(table);
-    
-    let caption = createCaption(tableName);
+
+    let caption = createElem('caption', 'table-name', tableName.value);
     table.appendChild(caption);
 
-    let tbody = createTbody();
+    if(!moreSetting.checked) {
+        let thead = createElem('thead', 'table-header');
+        table.appendChild(thead);
+        createTheadContent(thead, 1, numberColumns);
+
+        let tfoot = createElem('tfoot', 'table-footer');
+        table.appendChild(tfoot);
+        createTfootContent(tfoot, 1, numberColumns);
+    }
+    else {
+        alert()
+        table.style.border = tableBorderWidth.value + 'px ' + tableBorderType.value + tableBorderColor.value;
+    }
+
+    let tbody = createElem('tbody', 'table-body');
     table.appendChild(tbody);
 
-    createRowsColumns(numberRows, numberColumns);
-    
+    createTableContent(tbody, numberRows, numberColumns);
+
     return table;
 }
 
-function createCaption(tableName) {
-    let caption = document.createElement('caption');
-    caption.classList.add('table-name');
-    caption.textContent = tableName.value;
+function createElem(tag, className, text) {
+    let elem = document.createElement(tag);
+    elem.classList.add(className);
+    elem.textContent = text;
 
-    return caption;
+    return elem;
 }
 
-function createTbody(table) {
-    let tbody = document.createElement('tbody');
-    tbody.className.add('table-body');
+function createTheadContent(thead, rows, cols) {
+    for (let i = 0; i < rows; i++) {
+        row = createElem('tr', 'table-row');
+        thead.appendChild(row);
 
-    return tbody;
-}
-
-function createRowsColumns(rows, cols) {
-    for (let i = 0; i < ; i++) {
-
-        let row = document.createElement('tr');
-        row.classList.add('table-row');
-        tbody.appendChild(row);
-
-        for(let j = 0; j < cols; j++) {
-            let data = document.createElement('td');
-            data.classList.add('table-data');
-            data.textContent = "lorem";
+        for (let j = 0; j < cols.value; j++) {
+            data = createElem('td', 'table-data', 'Lorem ipsum dolor sit amet.');
             row.appendChild(data);
         }
     }
+    return thead;
+}
+
+function createTableContent(tbody, rows, cols) {
+
+    for (let i = 0; i < rows; i++) {
+        row = createElem('tr', 'table-row');
+        tbody.appendChild(row);
+
+        for (let j = 0; j < cols.value; j++) {
+            data = createElem('td', 'table-data', 'Lorem ipsum dolor sit amet.');
+            if(moreSetting.checked) {
+                data.style.padding = tableDataPadding.value + 'px';
+            }
+            row.appendChild(data);
+        }
+    }
+    return tbody;
+}
+
+function createTfootContent(tfoot, rows, cols) {
+    for (let i = 0; i < rows; i++) {
+        row = createElem('tr', 'table-row');
+        tfoot.appendChild(row);
+
+        for (let j = 0; j < cols.value; j++) {
+            data = createElem('td', 'table-data', 'Lorem ipsum dolor sit amet.');
+            row.appendChild(data);
+        }
+    }
+    return tfoot;
 }
 
 btnCreate.addEventListener('click', function () {
-    let table = createTable()
-}); 
+    table = createTable();
+});
 
+btnRemove.('click', function () {
+    table = createTable();
+});
 
+moreSetting.addEventListener('change', function() {
+    for (let i = 0; i < moreSettingHidde.length; i++) {
+        moreSettingHidden[i].classList.toggle('more-setting__hidden');
+    }
+});
 
+tableBorderWidth.addEventListener('input', function() {
+    table.style.borderWidth = tableBorderWidth.value + 'px';
+});
 
+tableBorderType.addEventListener('input', function () {
+    table.style.borderType = tableBorderType.value;
+});
 
+tableBorderColor.addEventListener('input', function () {
+    table.style.borderColor = tableBorderColor.value;
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+tableDataPadding.addEventListener('input', function () {
+    let tableData = document.getElementsByClassName('table-data');
+    
+    for(let td of tableData) {
+        style.padding = tableDataPadding.value + 'px';
+    }
+});
 
