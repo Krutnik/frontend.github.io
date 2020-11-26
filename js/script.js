@@ -54,9 +54,9 @@ chkImage.onchange = function() {
 }
 
 for (let i = 0; i < imgTypes.length; i++) {
-    imgTypes[i].oninput = function () {
-        if (imgChange.checked) {
-            children = newElements.querySelectorAll('.photo');
+     imgTypes[i].oninput = function () {
+         if (imgChange.checked) {
+             children = newElements.querySelectorAll('.photo');
 
             for (let i = 0; i < children.length; i++) {
                 imgClass = getImgType(imgTypes);
