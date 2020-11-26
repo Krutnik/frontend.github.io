@@ -27,7 +27,10 @@ function createTable() {
     let caption = createCaption(tableName);
     table.appendChild(caption);
 
-    let tbody = createTbody()
+    let tbody = createTbody();
+    table.appendChild(tbody);
+
+    createRowsColumns(numberRows, numberColumns);
     
     return table;
 }
@@ -40,8 +43,27 @@ function createCaption(tableName) {
     return caption;
 }
 
-function createTbody() {
-    
+function createTbody(table) {
+    let tbody = document.createElement('tbody');
+    tbody.className.add('table-body');
+
+    return tbody;
+}
+
+function createRowsColumns(rows, cols) {
+    for (let i = 0; i < ; i++) {
+
+        let row = document.createElement('tr');
+        row.classList.add('table-row');
+        tbody.appendChild(row);
+
+        for(let j = 0; j < cols; j++) {
+            let data = document.createElement('td');
+            data.classList.add('table-data');
+            data.textContent = "lorem";
+            row.appendChild(data);
+        }
+    }
 }
 
 btnCreate.addEventListener('click', function () {
