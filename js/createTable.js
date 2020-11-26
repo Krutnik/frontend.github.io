@@ -1,4 +1,5 @@
-let numberRows = document.getElementById('numberRows')/value;
+let tableName = document.getElementById('tableName').value;
+let numberRows = document.getElementById('numberRows').value;
 let numberColumns = document.getElementById('numberColumns').value;
 
 let tableBorderWidth = document.getElementById('tableBorderWidth').value + 'px';
@@ -18,7 +19,34 @@ let dataBorderColor = document.getElementById('dataBorderColor').value;
 let btnCreate = document.querySelector('.btn-create');
 let btnRemove = document.querySelector('.btn-remove');
 
+function createTable() {
+    let table = document.createElement('table');
+    table.classList.add('table');
+    document.body.appendChild(table);
+    
+    let caption = createCaption(tableName);
+    table.appendChild(caption);
 
+    let tbody = createTbody()
+    
+    return table;
+}
+
+function createCaption(tableName) {
+    let caption = document.createElement('caption');
+    caption.classList.add('table-name');
+    caption.textContent = tableName.value;
+
+    return caption;
+}
+
+function createTbody() {
+    
+}
+
+btnCreate.addEventListener('click', function () {
+    let table = createTable()
+}); 
 
 
 
