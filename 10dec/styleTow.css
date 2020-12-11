@@ -1,0 +1,47 @@
+.blok {
+    display: flex;
+    background-color: rgb(212, 238, 66);
+    border-radius: 20px;
+}
+
+.card {
+    border: 2px solid black;
+    margin: 10px;
+    min-width: 250px;
+    text-align: center;
+    background-color: rgb(95, 108, 226);
+    border-radius: 20px;
+}
+
+.card .cart {
+    padding: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.card .heading {
+    color: white;
+    text-transform: uppercase;
+}
+
+.card .description {
+    text-align: left;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.price-buy {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.price-buy p {
+    width: 50px;
+    color: black;
+    border: 2px solid black;
+    background-color: rgb(53, 238, 192);
+    border-radius: 30%;
+}

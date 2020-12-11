@@ -108,7 +108,7 @@ btnCreate.addEventListener('click', function () {
     table = createTable();
 });
 
-btnRemove.('click', function () {
+btnRemove('click', function () {
     table = createTable();
 });
 
