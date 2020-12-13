@@ -1,0 +1,336 @@
+body {
+    background-image: url(/ending/img/orda.jpg);
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: 'Langar', cursive;
+    text-align: center;
+    color: Beige;
+
+}
+
+section {
+    margin-top: 50px;
+    padding: 20px;
+    border: 5px solid white;
+}
+
+.image {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: beige;
+    padding: 10px;
+    border-radius: 20px 20px 0 0;
+    outline: none;
+    border: none;
+
+    &:hover {
+        background-color: rgb(67, 122, 22);
+    }
+    &:focus {
+        background-color: rgb(170, 168, 32);
+    }
+    &:active {
+        background-color: rgb(212, 82, 31);
+    }
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    background-color: rgb(53, 30, 0);
+    font-family: 'Langar', cursive;
+
+
+    &__title {
+        padding: 10px;
+    }
+
+    &__link {
+        width: 150px;
+        height: 40px;
+        text-align: center;
+        font-size: 25px;
+        text-decoration: none;
+        color: Beige;
+
+        &:hover {
+            background-color: rgb(67, 122, 22);
+            border-radius: 20%;
+        }
+        &:focus {
+            background-color: rgb(170, 168, 32);
+            border-radius: 20%;
+            outline: none;
+        }
+        &:active {
+            background-color: rgb(212, 82, 31);
+            border-radius: 20%;
+        }
+    }
+
+    &__btn {
+        width: 150px;
+        height: 50px;
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        font-size: 25px;
+        font-family: 'Langar', cursive;
+        color: Beige;
+        background-color: rgb(102, 58, 0);
+
+        &:hover {
+            background-color: rgb(67, 122, 22);
+        }
+        &:focus {
+            background-color: rgb(170, 168, 32);
+        }
+        &:active {
+            background-color: rgb(212, 82, 31);
+        }
+    }
+}
+
+.game {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    & span {
+        text-transform: uppercase;
+    }
+
+    &__image {
+        width: 500px;
+        height: 500px;
+        margin: 10px;
+    }
+}
+
+.hockey {
+    text-align: right;
+}
+
+.hockey-history {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 850px;
+    
+    &__text {
+        padding: 10px;
+        overflow: auto;
+        width: 20%;
+        height: 95%;
+        right: 10px;
+        top: 10px;
+        border: 1px solid white;
+        border-radius: 50px 0 0 50px;
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    &__image {
+        position: relative;
+        margin-right: 10px;
+
+        & img {
+            border-radius: 50px 0 0 50px;
+            position: absolute;
+        }
+
+        & .img-1,
+          .img-5,
+          .img-6,
+          .img-7,
+          .img-9 {
+            z-index: 5;
+        }
+
+        & .img-3,
+          .img-6,
+          .img-8 {
+            width: 400px;
+            height: 400px;
+        }
+
+        & .img-1 {
+            top: -50px;
+            left: 20px;
+
+        }
+        & .img-2 {
+            top: 370px;
+            left: 50px;
+        }
+        & .img-3 {
+            top: 60px;
+            left: 250px;
+        }
+        & .img-4 {
+            top: 250px;
+            left: 520px;
+        }
+        & .img-5 {
+            top: 500px;
+            left: 360px;
+        }
+
+        & .img-6 {
+            top: 450px;
+            left: 700px; 
+        }
+        & .img-7 {
+            top: 180px;
+            left: 850px;
+        }
+        & .img-8 {
+            top: 40px;
+            left: 1040px;
+        }
+        & .img-9 {
+            top: 500px;
+            left: 1080px;
+        }
+
+        & .img-10 {
+            top: -10px;
+            left: 700px;
+        }    
+    }
+}
+
+
+
+.table-game {
+    margin-top: 50px;
+    padding: 20px;
+    text-align: left;
+    border: 5px solid white;
+
+    &__setting {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        &__text {
+            width: 20%;
+            padding: 10px;
+            overflow: auto;
+            width: 20%;
+            min-height: 95%;
+            border: 1px solid white;
+            border-radius: 0 50px 50px 0;
+            background-color: rgba(255, 255, 255, 0.2);
+
+            & ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+
+                & li {
+                    list-style-type: none;
+                    margin: 10px;
+                }
+            }
+            
+        }
+
+        &__card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            width: 20%;
+            border: 1px solid white;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 0 50px 50px 0;
+
+            &__description {
+                text-align: center;
+
+                & img {
+                border-radius: 0 50px 50px 0;
+                }
+
+                & p {
+                    text-align: left;
+                }
+            }
+
+            &__more {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.craft__blok {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    &__project,
+    &__in-work,
+    &__helpers,
+    &__inspiration,
+    &__about {
+        width: 20%;
+        margin: 10px;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 0 0 50px 50px;
+    }
+
+    &__project {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+
+        &__more {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+
+
+            & img {
+                width: 200px;
+                height: 200px;
+                margin: 10px;
+            }
+
+            & .img-a,
+            & .img-b {
+                height: 300px;
+            }
+        
+            & .img-a {}
+            & .img-b {}
+            & .img-c {}
+            & .img-d {}
+            & .img-e {}
+        }
+    }
+    &__in-work {}
+    &__helpers {}
+    &__inspiration {}
+    &__about {}
+}
+
+    
