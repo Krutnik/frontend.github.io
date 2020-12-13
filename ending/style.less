@@ -15,7 +15,7 @@ section {
     border: 5px solid white;
 }
 
-.image {
+img {
     width: 300px;
     height: 300px;
     border-radius: 20px;
@@ -285,21 +285,20 @@ a {
     justify-content: space-around;
     
     &__project,
-    &__in-work,
-    &__helpers,
-    &__inspiration,
+    &__work,
     &__about {
-        width: 20%;
+        width: 30%;
         margin: 10px;
-        padding: 10px;
         background-color: rgba(255, 255, 255, 0.2);
         border-radius: 0 0 50px 50px;
+        border: 1px solid white;
     }
 
     &__project {
         display: flex;
         flex-direction: column;
-        width: 30%;
+        padding-bottom: 30px;
+        box-sizing: border-box;
 
         &__more {
             display: flex;
@@ -318,18 +317,73 @@ a {
             & .img-b {
                 height: 300px;
             }
-        
-            & .img-a {}
-            & .img-b {}
-            & .img-c {}
-            & .img-d {}
-            & .img-e {}
         }
     }
-    &__in-work {}
-    &__helpers {}
-    &__inspiration {}
-    &__about {}
+
+    &__work {
+        width: 50%;
+        background-color: rgba(255, 255, 255, 0);
+        border: none;
+
+        &-in-work {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 1px solid white;
+            margin-bottom: 20px;
+
+            &__setting {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                flex-wrap: wrap;
+
+                & .future {
+                    margin: 10px;
+                    width: 40%;
+                    padding: 10px;
+                    border: 1px solid wheat;
+                    border-radius: 20px;
+                }
+            }
+
+            & img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+        &-helpers {
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 1px solid white;
+        }
+        &-inspiration {
+            background-color: rgba(255, 255, 255, 0.2);
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 0 0 50px 50px;
+            border: 1px solid white;
+        }
+
+    }
+
+    &__about {
+        width: 20%;
+        padding: 10px;
+        overflow: auto;
+
+        & p {
+            margin-top: 50px;
+        }
+
+        & ul {
+            text-align: left;
+
+            & li {
+                list-style-type: none;
+            }
+        }
+    }
 }
 
     
